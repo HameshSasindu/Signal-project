@@ -1,0 +1,41 @@
+@media screen and (min-width: 767px) {
+    html, body {
+        height: 100vh; /* Ensure html and body take full viewport height */
+        margin: 0; /* Reset default body margin */
+    }
+    *{
+        
+    }
+    body {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        padding-left:0;
+    }
+    .dt-home{
+        display: grid;
+        grid-template-columns: 400px 1fr;      
+        height: 100%;  
+    } 
+    .dt-left {
+        background: #aaa;
+        height: 100%;
+    }   
+    .dt-right {
+        position: relative;
+        border: 1px solid #000;
+        height: 100%;  
+     
+    }
+    .dt-right .input-in {
+        width: calc(100% - 400px);
+        left: 400px;
+        bottom: 0;
+    }
+    .dt-right .topBar {
+        top: 50px;
+        left: 400px;
+        width: calc(100% - 400px);
+    }
+ 
+}
+

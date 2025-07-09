@@ -1,0 +1,156 @@
+.typing {
+    font-size: 0.8rem;
+    font-weight:700;
+    color: var(--primary);
+}
+.online {
+    font-size: 0.8rem;
+    font-weight:700;
+    color: #1db954;
+}
+/*** ChatInput ***/
+.input-in {
+    padding: 10px;
+    width: 100%;
+    position:fixed; bottom:0;left:0;
+    z-index: 10;
+}
+
+.input-in .input {
+    width: 100%; height: 40px;
+    border-radius: 8px;
+    padding:10px 50px 10px 10px;
+    background: #e1e1e1;
+}
+.input-in .send {
+    width: 40px; height: 40px;   
+    position: absolute;
+    background: none;    
+    border-radius: none;
+    top:0; right: 0px;
+    margin:0;
+}
+.input-in .send .ion-icon {
+    width: 20px;
+    color: var(--primary);
+}
+
+
+/**** ContactBar ****/
+.topBar {
+    background: #fff; width: 100%;
+    z-index: 10;
+    border-bottom: 1px solid #999;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding:0;
+    position:fixed; top:0;left:0;
+    z-index: 10;
+}
+
+.topBar button {
+    width: 50px; height: 50px;
+    border-radius: 0; background: none;
+    margin:0;
+    
+}
+.topBar button ion-icon {
+    font-size: 25px;
+    color: black;
+}
+
+
+/********  Reply containers ********/
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;    
+    gap: 8px;
+}
+ .reply  {
+    background: var(--primary);
+    width: max-content;
+    max-width: 70%;
+    border-radius: 8px;
+    height: auto;
+    padding: 6px 10px;
+    align-self: flex-start;
+    display: inline-block;
+    line-height: 1.4;
+    gap: 4px;
+    position: relative;
+    color: #fff;
+}
+.reply *{
+    border:1px sold #000;
+}
+.reply .msg-text{
+    width: max-content;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    max-width: 100%;
+}
+.reply .time { 
+    width: max-content;    
+    font-size: 0.6rem;
+    vertical-align: bottom;
+    float: right;
+    color: #ddd;
+    display: inline-block;
+    margin-top: 6.5px;
+}
+.reply.own {
+    align-self: flex-end;
+    background: #eee;
+    color: #000;
+} 
+.reply .status .ion-icon {
+    width: 15px;
+    color: #aaa;
+    display: inline-block;
+}
+.reply  .status.read .ion-icon {
+    color: var(--primary);
+    width: 15px;
+}
+/* option list for replies */
+.portal-bg {
+    background: rgba(0,0,0,.5);
+    width: 100%; height: 100%;
+    position: fixed; inset:0;
+    z-index:999;
+    backdrop-filter: blur(1px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    gap: 10px;
+    padding-inline: 20px;
+    pointer-events: auto;
+}
+
+.portal-content {
+    width:;
+}
+.optionList {
+    width: max-content;
+    background: #555;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.option {
+    padding: 5px 10px;
+    display: flex;
+    border-bottom: 1px solid #bbb;
+    gap: 5px;
+}
+.option:nth-child(last-child) {
+    border: none;
+}
+.option:active {
+    background: #777;
+}

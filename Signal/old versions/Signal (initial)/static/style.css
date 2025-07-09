@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face{
+    font-family: english;
+    src: url("fonts/english.ttf");
+}
+@font-face{
+    font-family: sinhala;
+    src: url("fonts/sinhala.ttf");
+}
+:root{
+    --primary: #3a76f0;
+}
+
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;    
+}
+a {
+    color: #1db954;
+    text-align: center;
+}
+body {
+    padding: 40px 10px 70px; 
+}
+
+body.chat-screen {
+    padding-block: 60px 80px; 
+}
+.relative{
+    width: 100%; height: 100%;
+    position: relative;
+}
+button, input{
+    border: none; outline: none;
+}
+div {
+    width: 100%;
+}
+.lbg {
+    display: flex; justify-content: center; padding:20px;
+}
+
+.lander {
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    position: fixed;
+    top:0; left:0;
+    padding: 5px 15px;
+}
+.lander img{
+    height: 30px;
+}
+.input-con input {
+    border-radius: 8px;
+    background: #eee;
+    width: 100%; height: 40px;
+    padding: 10px 10px 10px 30px;
+}
+.input-con ion-icon {
+    position: absolute;
+    left: 10px; top:50%; transform:translateY(-50%);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 10px;
+}
+.form button {
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    background: #1db954;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.phone-con {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.phone-con p {
+    color: red;
+    font-size: 0.8rem;
+    
+}
+.error{
+    color: red;
+    font-size: 0.8rem; 
+}
+
+
+
+.chat-item {
+    background: #ddd;
+    border-radius: 8px;
+    width: 100%; height: 35px;
+    display: flex; align-items: center;
+    gap: 10px; padding: 10px;
+}
+
+.chat-item span {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+}
+span.online {background: #1db954;}
+span.offline{background: red;}
+
+.chat-list{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-in {
+    padding: 10px;
+    width: 100%;
+    position:fixed; bottom:0;left:0;
+}
+
+.input-in .input {
+    width: 100%; height: 40px;
+    border-radius: 8px;
+    padding:10px 50px 10px 10px;
+    background: #ddd;
+}
+.input-in .send {
+    width: 40px; height: 40px;   
+    position: absolute;
+    background: none;    
+    border-radius: none;
+    top:0; right: 0px;
+    margin:0;
+}
+.typing {
+    font-size: 0.9rem;
+    font-weight:700;
+    color: var(--primary);
+}
+
+.input-in .send ion-icon {
+    font-size: 20px;
+    color: var(--primary);
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;    
+    gap: 8px;
+}
+ .reply  {
+    background: var(--primary);
+    width: max-content;
+    max-width: 70%;
+    border-radius: 8px;
+    height: auto;
+    padding: 6px 10px;
+    align-self: flex-start;
+    display: inline-block;
+    line-height: 1.4;
+    gap: 4px;
+    position: relative;
+    color: #fff;
+}
+.reply *{
+    border:1px sold #000;
+}
+.reply .msg-text{
+    width: max-content;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    max-width: 100%;
+}
+.reply .time { 
+    width: max-content;    
+    font-size: 0.6rem;
+    vertical-align: bottom;
+    float: right;
+    color: #ddd;
+    display: inline-block;
+    margin-top: 6.5px;
+}
+.reply.own {
+    align-self: flex-end;
+    background: #eee;
+    color: #000;
+} 
+.reply .status.del {
+    font-size: 0.5rem;
+    color: #aaa;
+}
+.reply  .status.read {
+    font-size: 0.5rem;
+    color: var(--primary);
+}
+   
+.topBar {
+    background: #ddd; width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding:0;
+    position:fixed; top:0;left:0;
+    z-index: 10;
+}
+
+.topBar button {
+    width: 50px; height: 50px;
+    border-radius: 0; background: none;
+    margin:0;
+    
+}
+.topBar button ion-icon {
+    font-size: 25px;
+    color: black;
+}
+
+.chat {
+    width: 100%; height: 60px;
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    padding-left: 10px;
+}
+.chat .names {
+    display: flex;
+    flex-direction: row;
+    gap:1px;
+    align-items: center;
+    max-width: 500px;
+    gap: 8px;
+}
+.chat .names .name{
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    justify-content: center;
+}
+.chat .names small {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 180px;
+}
+.chat .meta{
+    display: flex;
+    flex-direction: column;
+    gap:1px;
+    justify-content: center;
+    align-items: center;   
+}
+.chat .names img{
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    
+}
+.chat .meta span {
+    background: var(--primary);
+    width: 20px; height: 20px;
+    font-size: 10px;
+    border-radius: 50%;
+    color: #fff;
+    display: grid;
+    place-items: center;
+}
+
+.adder{
+    background: var(--primary);
+    width: 50px; height: 50px;
+    border-radius: 50%;
+    position: fixed;
+    bottom:20px; right:20px;
+}
+.adder ion-icon {
+    color: white;
+}    
+
+.userlist{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.userlist div {
+    background: #eee;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+}

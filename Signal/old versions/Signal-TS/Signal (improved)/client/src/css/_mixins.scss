@@ -1,0 +1,32 @@
+@mixin user-select-none {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+@mixin flex-hori-center {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flex-vert-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin flex-column-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin absolute-vert-center {
+    position: absolute;
+    top:50%; transform:translateY(-50%);
+}

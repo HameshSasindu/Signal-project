@@ -1,0 +1,170 @@
+/* profile card */
+.profile {
+    background: none; width: 50px;height: 50px;
+    position: fixed; top:0; right:0;
+}
+.profile .ion-icon {
+    width: 40px;
+}
+
+.ac-bg {
+    background: rgba(0,0,0, .5);
+    backdrop-filter: blur(1px);
+    width: 100%; height: 100%;
+    position: fixed; inset:0;
+    z-index: 12;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.account-card {
+    width: 100%;
+    background: #fff;  
+    padding: 10px;
+    border-radius: 16px; 
+    display: grid;
+    grid-template-rows: 122px 50px 1fr 40px;
+}
+
+.account-card .pfp {
+    display: grid;
+    place-items: center;
+}
+.account-card .pfp img{
+    width: 120px; height: 120px;
+    border-radius: 50%;
+}
+.account-card .pfp .relative {
+    width: max-content;
+}
+.account-card .pfp span.dotOn {
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    background: #1db954;
+    position: absolute;
+    bottom: 10px; right:10px;
+    
+}
+.account-card .logout {
+    width: 100%;
+    height: 40px;
+    background: red;
+    border-radius: 8px;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    align-self: flex-end;
+}
+.account-card .meta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.account-card .Ops .Op{
+    width: 100%; height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+}
+*{
+    border: 1px solid #00;
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.settings .profileSec {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    gap: 8px;
+}
+.settings .profileSec .pic {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+}
+
+.settings .profileSec .pic img {
+    width: 150px; aspect-ratio: 1/1;
+    border-radius: 50%;    
+}
+.settings .profileSec .pic .icon {
+    background: var(--primary);
+    width: 30px;aspect-ratio: 1/1;
+    color: #fff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    bottom:5px; right: 8px;
+}
+.settings .profileSec .profile-item .names{
+    width: 100%; padding: 5px;
+    display: flex;
+    flex-direction: column;    
+    gap:2px;
+}
+.settings .profileSec .profile-item {
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    border-bottom: 1px solid #aaa;
+}
+
+.settings .profileSec .profile-item .icon {
+    display: grid;
+    place-items: center;
+    width: 100%; height: 100%;
+}
+
+.settings .profileSec .profile-item small {
+    opacity: 0.6;
+    font-size: 0.8rem;
+}
+
+.prompt-bg {
+    background: rgba(0,0,0,.3);
+    width: 100%; height: 100%;
+    position: fixed; inset:0;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    z-index: 99;
+}
+
+.prompt {
+    width: 100%;
+    padding: 15px;
+    background: #fff;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.prompt input {
+    background: #eee;
+    width: 100%;
+    border-radius: 8px;
+    padding: 10px;
+    height: 35px;
+}
+.prompt button {
+    background: var(--primary);
+    width: 100%;
+    height: 35px;
+    border-radius: 8px;
+    margin-block: 5px;
+    color: white;
+}

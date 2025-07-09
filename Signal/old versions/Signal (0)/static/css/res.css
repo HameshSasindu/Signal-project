@@ -1,0 +1,49 @@
+@media screen and (min-width: 767px) {
+    html, body {
+        margin: 0;
+    }
+    body.chat-screen {
+        padding:0;
+    }
+    body {
+        height: 100vh;
+        padding-top:0;
+        padding-left:0;
+    }
+    .dt-left *{
+        border: 1px solid #0;
+    }
+    
+    .dt-home{
+        display: grid;
+        grid-template-columns: 350px 1fr;      
+        height: 100%;  
+    } 
+    .dt-left {
+        height: calc(100vh - 50px);
+        width: 100%;
+        padding-top: 60px;
+        position: relative;
+        border-right: 1px solid #999;
+        overflow: hidden;
+    }
+    .dt-right {
+        position: relative;
+        height: 100%;  
+        padding: 60px 5px 70px; 
+        border: 1px solid #00;
+        width: 100%;
+        overflow: hidden;
+        overflow-y: scroll;
+    }
+    .chat-container {
+        max-height: calc(100% - 50px - 70px);
+        max-height: 100px;
+        overflow-y: scroll;
+    }
+    .dt-right .input-in, .topBar, .adder, .lander {
+        position: absolute;
+    }
+ 
+}
+

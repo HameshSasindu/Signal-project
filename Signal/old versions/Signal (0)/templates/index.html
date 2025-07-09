@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signal</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="stylesheet" href="/static/css/root.css">
+    <script src="/static/swr.js"></script>    
+    
+    <script type="importmap">
+        {
+            "imports": {
+                "react": "https://esm.sh/react@19",
+                "react-dom/client": "https://esm.sh/react-dom@19/client",
+                "react-redux": "https://esm.sh/react-redux",
+                "@reduxjs/toolkit": "https://esm.sh/@reduxjs/toolkit",
+                "react-router-dom": "https://esm.sh/react-router-dom",
+                "socket.io-client": "https://esm.sh/socket.io-client",
+                "axios": "https://esm.sh/axios",
+                "@tanstack/react-query": "https://esm.sh/@tanstack/react-query",
+                "ldrs": "https://esm.sh/ldrs",
+                "@/": "/static/",
+                "@globals": "/static/components/globals.js",
+                "@hooks": "/static/hooks/",
+                "@redux": "/static/redux/",
+                "@pages": "/static/pages"
+            }
+        }
+    </script>   
+     
+    <script src="/node/ion-icon" defer></script>
+        
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ldrs/dist/auto/ring2.js"></script>
+    
+    
+</head>
+<body>
+    
+    <div id="svg-container" style="display: none;"></div>    
+    <div id="root"></div>
+    <div id="modal-root"></div>
+    
+    <script>
+        fetch('/svg-icons')
+          .then(response => response.text())
+          .then(svgData => {
+            document.getElementById('svg-container').innerHTML = svgData;
+        });
+    </script>
+    
+    
+    
+    <script type="module" src="/static/index.js"></script>
+    
+
+
+</body>
+</html>
